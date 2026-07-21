@@ -140,6 +140,28 @@ describe('WebShellWithProviders top-level boundary', () => {
       workspaceCwd: '/work/secondary',
     });
     expect(appProps[0]?.lockedWorkspaceCwd).toBeUndefined();
+    expect(appProps[0]).toMatchObject({
+      initialWorkspaceCwd: '/work/secondary',
+    });
+  });
+
+  it('shows the workspace selected by id without locking the UI', () => {
+    workspaceCapabilities = {
+      workspaces: [
+        { id: 'primary', cwd: '/workspace', primary: true },
+        { id: 'secondary', cwd: '/work/secondary', primary: false },
+      ],
+    };
+
+    render(<WebShellWithProviders workspaceId="secondary" />);
+
+    expect(sessionProviderProps[0]).toMatchObject({
+      workspaceCwd: '/work/secondary',
+    });
+    expect(appProps[0]).toMatchObject({
+      initialWorkspaceCwd: '/work/secondary',
+      lockedWorkspaceCwd: undefined,
+    });
   });
 
   it('does not register an unknown unlocked workspace path', () => {

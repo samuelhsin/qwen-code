@@ -229,6 +229,7 @@ export function WorkspaceSessionProvider({
     >
       <App
         {...webShellProps}
+        initialWorkspaceCwd={targetWorkspace?.cwd}
         lockedWorkspaceCwd={lockWorkspaceCwd ? targetWorkspace?.cwd : undefined}
         lockedWorkspaceCapability={
           lockWorkspaceCwd ? targetWorkspace : undefined

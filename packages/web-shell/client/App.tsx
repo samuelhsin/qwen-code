@@ -591,6 +591,8 @@ export interface WebShellProps {
 }
 
 interface AppProps extends WebShellProps {
+  /** Registered workspace selected by the outer provider without locking the selector. */
+  initialWorkspaceCwd?: string;
   lockedWorkspaceCwd?: string;
   lockedWorkspaceCapability?: DaemonWorkspaceCapability;
 }
@@ -1029,6 +1031,7 @@ export function App({
   composerInputVersion,
   onSessionChange,
   onSubmitBefore,
+  initialWorkspaceCwd,
   lockedWorkspaceCwd,
   lockedWorkspaceCapability,
 }: AppProps = {}) {
@@ -1202,7 +1205,7 @@ export function App({
   // so the ensureSessionForPrompt callback must read the latest value.
   const [selectedWorkspaceCwd, setSelectedWorkspaceCwd] = useState<
     string | undefined
-  >(undefined);
+  >(initialWorkspaceCwd);
   const selectedWorkspaceCwdRef = useRef(selectedWorkspaceCwd);
   selectedWorkspaceCwdRef.current = selectedWorkspaceCwd;
   const [selectedWorkspaceGitBranch, setSelectedWorkspaceGitBranch] = useState<
