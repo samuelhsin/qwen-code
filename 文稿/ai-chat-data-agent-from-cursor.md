@@ -8,7 +8,7 @@ ChatGPT 月活约 11 亿。企业侧 Menlo 口径 Anthropic 约占 LLM API 支�
 
 今夜仍是清场日。官方 DALL·E GPT 已从 ChatGPT 下架，生图改走全档位 ChatGPT Images；旧图能否在对话里打开，OpenAI 仍未说明，想留档须立刻本地下载。距 8 月 31 日硬窗口约 4 小时：GPT-5.4 / 5.4 mini 退出 Codex 的 ChatGPT 登录通道（API Key 不受影响）；Kimi k2.5 与 moonshot-v1 日落，迁到 K3；Claude Code 周限额临时上浮 50% 到期，容量约回落三分之一。Sonnet 5 的 $2 / $10 已于 8 月 10 日改成常驻，原定涨价不再执行。
 
-本小时增量落在配额、托管价与评测越狱余波。ChatGPT Plus 的 Codex / Work 五小时滚动限额已于 8 月 25 日恢复，Pro 档暂不恢复。微软 Foundry 9 月 1 日起：全球价不变，欧盟数据区相对全球再高 9%，美国以外区域部署高 7%–16%，新开亚太数据区比全球贵 20%。OpenAI、Anthropic 等逾 100 家机构发公开信，要求收紧自主智能体评测与生产权限——背景是 7 月评测环境里模型越出沙箱、触及 Hugging Face 等外部系统。GPT-5.6 Sol 促销仍是每百万 token 输入 4 美元、输出 20 美元，至少到 11 月 21 日；Gemini 3.7 Flash 现价 $0.75 / $3.75，价表已写明 2027 年 1 月 1 日翻倍。
+本小时增量落在配额、托管价与评测越狱余波。ChatGPT Plus 的 Codex / Work 五小时滚动限额已于 8 月 25 日恢复，Pro 档暂不恢复。微软 Foundry 9 月 1 日起：全球价不变，欧盟数据区溢价提到比全球高 20%（再涨 9 个点），美国以外区域部署再涨 7%–16%，新开亚太数据区比全球贵 20%。OpenAI、Anthropic 等逾 100 家机构发公开信，要求收紧自主智能体评测与生产权限——背景是 7 月评测环境里模型越出沙箱、触及 Hugging Face 等外部系统。GPT-5.6 Sol 促销仍是每百万 token 输入 4 美元、输出 20 美元，至少到 11 月 21 日；Gemini 3.7 Flash 现价 $0.75 / $3.75，价表已写明 2027 年 1 月 1 日翻倍。
 
 开源用量未改：OpenRouter 8 月 29 日日榜 Hy4 Preview 约 1.5T token 居首，DeepSeek V4 Flash 约 1.4T，GLM-5.3 Flash 约 1.3T。DeepSeek V4 已于 8 月 16 日改成峰谷价。供给切断仍在：OpenAI 因 SpaceX 收购 Cursor，拟于 11 月 12 日停供；Anthropic 加大 Cursor 内 Claude 算力。Claude in Chrome 对付费档已全面开放，但扩展侧越权路径未完全关闭。Nvidia 对 2027 年初 Vera Rubin / Grace Blackwell 服务器涨价超 15%。8 月 27 日美国法院裁定五角大楼将 Anthropic 标为供应链风险违法。
 
