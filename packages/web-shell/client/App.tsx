@@ -948,6 +948,13 @@ export type WebShellComposerPlaceholders = Readonly<
   Partial<Record<WebShellComposerPlaceholderState, string>>
 >;
 
+export interface WebShellInitialTranscriptDrafts {
+  /** Composer text used when the initial session transcript has no meaningful blocks. */
+  emptyTranscript?: string;
+  /** Composer text used when the initial session transcript ends with a completed tool. */
+  completedToolTail?: string;
+}
+
 export interface WebShellSlashCommand {
   /** Slash command name without the leading slash, normalized to lower case. */
   command: string;
@@ -1022,6 +1029,12 @@ export interface WebShellProps {
    * WebShell localized default; shell-mode and follow-up copy still wins.
    */
   composerPlaceholders?: WebShellComposerPlaceholders;
+  /**
+   * Optional drafts for an initially loaded session. WebShell only evaluates
+   * these once, after the initial transcript load finishes, and never submits
+   * or replaces existing composer input.
+   */
+  initialTranscriptDrafts?: WebShellInitialTranscriptDrafts;
   /** Called when connection status changes (idle/connecting/connected/disconnected/error). */
   onConnectionChange?: (status: string) => void;
   /** Called when prompt status changes (idle/waiting/responding). */
@@ -1167,6 +1180,8 @@ export interface WebShellProps {
 }
 
 interface AppProps extends WebShellProps {
+  /** Controlled session supplied by the batteries-included wrapper; null marks its welcome page. */
+  initialSessionId?: string | null;
   initialSelectedWorkspaceCwd?: string;
   lockedWorkspaceCwd?: string;
   lockedWorkspaceCapability?: DaemonWorkspaceCapability;
@@ -1998,6 +2013,7 @@ export function App({
   shellRef,
   composerToolbarActions,
   composerPlaceholders,
+  initialTranscriptDrafts,
   compactThinking = false,
   collapseCompletedTurns = true,
   markdownTableMode = 'basic',
@@ -2016,6 +2032,7 @@ export function App({
   onSubmitBefore,
   restartSseOnPrompt,
   historyPageSize,
+  initialSessionId,
   initialSelectedWorkspaceCwd,
   lockedWorkspaceCwd,
   lockedWorkspaceCapability,
@@ -4406,6 +4423,26 @@ export function App({
   const statusBarRef = useRef<StatusBarHandle>(null);
   const messageListRef = useRef<MessageListHandle | null>(null);
   const editorRef = useRef<EditorHandle | null>(null);
+  const mountedSessionIdRef = useRef(connection.sessionId);
+  const initialTranscriptSessionId =
+    initialSessionId === undefined
+      ? mountedSessionIdRef.current
+      : (initialSessionId ?? undefined);
+  const initialTranscriptDraftStateRef = useRef({
+    sessionId: initialTranscriptSessionId,
+    loadingObserved: false,
+    processed: false,
+  });
+  if (
+    initialTranscriptDraftStateRef.current.sessionId !==
+    initialTranscriptSessionId
+  ) {
+    initialTranscriptDraftStateRef.current = {
+      sessionId: initialTranscriptSessionId,
+      loadingObserved: false,
+      processed: false,
+    };
+  }
   const notifiedComposerReadyRef = useRef<EditorHandle | null>(null);
   const [canScrollMessageListToBottom, setCanScrollMessageListToBottom] =
     useState(false);
@@ -4436,6 +4473,56 @@ export function App({
   useEffect(() => {
     assignComposerRef(composerRef, editorRef.current ?? emptyComposerApi);
   }, [composerRef]);
+  useEffect(() => {
+    const draftState = initialTranscriptDraftStateRef.current;
+    if (
+      !initialTranscriptDrafts ||
+      !initialTranscriptSessionId ||
+      draftState.sessionId !== initialTranscriptSessionId ||
+      connection.sessionId !== initialTranscriptSessionId ||
+      draftState.processed
+    ) {
+      return;
+    }
+    if (connection.loadingTranscript) {
+      draftState.loadingObserved = true;
+      return;
+    }
+    if (
+      !draftState.loadingObserved ||
+      connection.catchingUp ||
+      connection.status !== 'connected'
+    ) {
+      return;
+    }
+
+    draftState.processed = true;
+    const editor = editorRef.current;
+    if (!editor || editor.hasInput()) return;
+
+    const meaningfulBlocks = store
+      .getSnapshot()
+      .blocks.filter(
+        (block) => block.kind !== 'status' && block.kind !== 'debug',
+      );
+    const lastBlock = meaningfulBlocks.at(-1);
+    const draft =
+      meaningfulBlocks.length === 0
+        ? initialTranscriptDrafts.emptyTranscript
+        : lastBlock?.kind === 'tool' && lastBlock.status === 'completed'
+          ? initialTranscriptDrafts.completedToolTail
+          : undefined;
+    if (!draft?.trim()) return;
+    editor.setText(draft);
+  }, [
+    connection.catchingUp,
+    connection.loadingTranscript,
+    connection.sessionId,
+    connection.status,
+    initialTranscriptDrafts,
+    initialTranscriptSessionId,
+    store,
+  ]);
   const [goalSnapshot, setGoalSnapshot] = useState<GoalSnapshotV2 | null>(null);
   const goalSnapshotRef = useRef<GoalSnapshotV2 | null>(null);
   goalSnapshotRef.current = goalSnapshot;

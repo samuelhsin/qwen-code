@@ -200,6 +200,7 @@ const {
   editorCommit,
   editorFocus,
   editorInsertText,
+  editorSetText,
   editorRestoreInputAnnotations,
   settingsReload,
   settingsSetValue,
@@ -513,6 +514,7 @@ const {
     editorCommit: vi.fn(),
     editorFocus: vi.fn(),
     editorInsertText: vi.fn(),
+    editorSetText: vi.fn(),
     editorRestoreInputAnnotations: vi.fn(),
     settingsReload: vi.fn().mockResolvedValue(undefined),
     settingsSetValue,
@@ -745,6 +747,7 @@ vi.mock('./components/ChatEditor', async () => {
           getText: () => testState.prompt,
           setText: (text) => {
             testState.prompt = text;
+            editorSetText(text);
           },
           restoreImages: () => undefined,
           restoreFiles: () => undefined,
@@ -5154,6 +5157,7 @@ beforeEach(() => {
   editorFocus.mockClear();
   editorRestoreInputAnnotations.mockClear();
   editorInsertText.mockClear();
+  editorSetText.mockClear();
   mockStore.appendLocalUserMessage.mockReset();
   settingsReload.mockClear();
   settingsReload.mockResolvedValue(undefined);
@@ -5341,6 +5345,134 @@ describe('App live transcript boundary', () => {
 
     await clickSubmit(document.body);
     await vi.waitFor(() => expect(writeText).toHaveBeenCalledWith('ab'));
+  });
+});
+
+describe('App initial transcript drafts', () => {
+  const drafts = {
+    emptyTranscript: 'Help me create a data synchronization task',
+    completedToolTail: 'Continue',
+  };
+
+  it('prefills an empty initial transcript once without submitting', async () => {
+    testState.prompt = '';
+    mockConnection.loadingTranscript = true;
+    mockConnection.catchingUp = true;
+    const { rerender } = renderApp({ initialTranscriptDrafts: drafts });
+    await flush();
+
+    mockConnection.loadingTranscript = false;
+    rerender();
+    await flush();
+    expect(editorSetText).not.toHaveBeenCalled();
+
+    mockConnection.catchingUp = false;
+    rerender();
+    await flush();
+
+    expect(editorSetText).toHaveBeenCalledOnce();
+    expect(editorSetText).toHaveBeenCalledWith(drafts.emptyTranscript);
+    expect(testState.prompt).toBe(drafts.emptyTranscript);
+    expect(mockSessionActions.sendPrompt).not.toHaveBeenCalled();
+  });
+
+  it('prefills Continue when the last meaningful block is a completed tool', async () => {
+    testState.prompt = '';
+    mockConnection.loadingTranscript = true;
+    const { rerender } = renderApp({ initialTranscriptDrafts: drafts });
+    await flush();
+
+    testState.blocks = [
+      { id: 'user', kind: 'user', text: 'Run the task' },
+      { id: 'tool', kind: 'tool', status: 'completed' },
+      { id: 'status', kind: 'status', text: 'idle' },
+      { id: 'debug', kind: 'debug', text: 'transport detail' },
+    ];
+    mockConnection.loadingTranscript = false;
+    rerender();
+    await flush();
+
+    expect(editorSetText).toHaveBeenCalledWith(drafts.completedToolTail);
+    expect(mockSessionActions.sendPrompt).not.toHaveBeenCalled();
+  });
+
+  it('does not prefill when agent output follows the completed tool', async () => {
+    testState.prompt = '';
+    mockConnection.loadingTranscript = true;
+    const { rerender } = renderApp({ initialTranscriptDrafts: drafts });
+    await flush();
+
+    testState.blocks = [
+      { id: 'tool', kind: 'tool', status: 'completed' },
+      { id: 'assistant', kind: 'assistant', text: 'Done' },
+    ];
+    mockConnection.loadingTranscript = false;
+    rerender();
+    await flush();
+
+    expect(editorSetText).not.toHaveBeenCalled();
+  });
+
+  it('does not overwrite an existing draft', async () => {
+    testState.prompt = 'Keep my draft';
+    mockConnection.loadingTranscript = true;
+    const { rerender } = renderApp({ initialTranscriptDrafts: drafts });
+    await flush();
+
+    mockConnection.loadingTranscript = false;
+    rerender();
+    await flush();
+
+    expect(editorSetText).not.toHaveBeenCalled();
+    expect(testState.prompt).toBe('Keep my draft');
+  });
+
+  it('does not prefill a welcome page that later creates a session', async () => {
+    testState.prompt = '';
+    mockConnection.sessionId = undefined;
+    mockConnection.loadingTranscript = true;
+    const { rerender } = renderApp({ initialTranscriptDrafts: drafts });
+    await flush();
+
+    mockConnection.sessionId = 'session-1';
+    mockConnection.loadingTranscript = false;
+    rerender();
+    await flush();
+
+    expect(editorSetText).not.toHaveBeenCalled();
+  });
+
+  it('requires an observed initial load and never re-evaluates pagination', async () => {
+    testState.prompt = '';
+    const { rerender, unmount } = renderApp({
+      initialTranscriptDrafts: drafts,
+    });
+    await flush();
+
+    testState.blocks = [{ id: 'status', kind: 'status', text: 'loaded' }];
+    rerender({ initialTranscriptDrafts: { ...drafts } });
+    await flush();
+    expect(editorSetText).not.toHaveBeenCalled();
+
+    unmount();
+    mockConnection.loadingTranscript = true;
+    const loaded = renderApp({ initialTranscriptDrafts: drafts });
+    await flush();
+    mockConnection.loadingTranscript = false;
+    loaded.rerender();
+    await flush();
+    expect(editorSetText).toHaveBeenCalledOnce();
+
+    testState.prompt = '';
+    testState.blocks = [
+      { id: 'older-user', kind: 'user', text: 'Older history' },
+      ...testState.blocks,
+    ];
+    loaded.rerender({ initialTranscriptDrafts: { ...drafts } });
+    await flush();
+
+    expect(editorSetText).toHaveBeenCalledOnce();
+    expect(testState.prompt).toBe('');
   });
 });
 

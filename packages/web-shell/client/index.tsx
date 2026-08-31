@@ -134,6 +134,7 @@ export type {
   WebShellApi,
   WebShellComposerPlaceholders,
   WebShellComposerPlaceholderState,
+  WebShellInitialTranscriptDrafts,
   WebShellSlashCommand,
   WebShellSlashCommandHandler,
   WebShellProps,

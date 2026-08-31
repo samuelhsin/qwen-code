@@ -239,6 +239,7 @@ export function WorkspaceSessionProvider({
     >
       <App
         {...webShellProps}
+        initialSessionId={effectiveSessionId ?? null}
         historyPageSize={historyPageSize}
         restartSseOnPrompt={restartSseOnPrompt}
         initialSelectedWorkspaceCwd={
