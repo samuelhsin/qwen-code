@@ -1,0 +1,25 @@
+# AI Chat 与大数据 Data Agent 产业简报
+
+更新：2026-09-02 14:16 UTC（固定路径覆盖写入，不另存日期副本）
+
+## 一、对话式 AI
+
+ChatGPT 周活过 10 亿，Gemini 应用月活过 10 亿。工作档：GPT-5.6、Sonnet 5、Gemini 3.7 Flash。
+
+8 月 31 日硬窗口已生效约 62.3 小时。GPT-5.4 已退出 Codex 的 ChatGPT 登录通道，应改到 gpt-5.6-terra / luna。Kimi k2.5 已日落。9 月 1 日已过约 38.3 小时。
+
+本小时增量：现场核过 OpenRouter，日桶仍停在 9 月 1 日，滚动 7 日表未动：DeepSeek V4 Flash 0731 12.1T、GLM 5.3 Flash 10T（标 new，第 2）、GPT-5.6 Luna 9.52T、MiMo-V2.5 7.2T、Hy3 5.89T、Hy4 preview 5.72T（第 6）、Ox Alpha 4T（第 9）。无新的产品硬窗口。WSJ 称 Gemini 3.8 Flash「最快周三」发布；周三 UTC 已过约 14.3 小时，Google 官方博客与 DeepMind 模型卡仍停在 3.7 Flash（8 月 13 日），无模型卡、API 或价目，不算硬窗口。DeepMind 博客仍无 3.8 Flash；可见的 9 月条目仍是 agentic video，Gemini Robotics ER 2 仍是 7 月 30 日稿。再核 Anthropic 官方页：Fable 5.1 仍为 9 月 1 日发布，$10 / $50，缓存读 $0.25；Terminal-Bench-Science 0.1 仍为 52.6%（Fable 5 24.7%，GPT-5.6 Sol 22.4%），Terminal-Bench 4.0 编码 55.8%、Mythos 5.1 为 60.9%。Copilot 六模型下线已满约 38.3 小时。ChatGPT 医疗 Epic 只读与 Gemini agentic video 官方页均未改。Gemini Notebook 消费档计算额度仍按 8 月 28 日官方预告滚动上线，不算模型/API 硬窗口。OpenAI 官方 9 月 1 日 Path to Astra 仍写即将放出、最强网络能力走 Daybreak Blue，无公开日、价目或通用 API。中国网信网 9 月 2 日 10:30 发「清朗·整治AI应用乱象」第二阶段：累计清理 561 万余条、查处账号 4.9 万余个、处置站点/应用 2400 余个，点名豆包、元宝、千问、文心一言严控输出与标识；属监管通报，不算产品硬窗口。
+
+EFS 与价目仍成立：Fable 5.1 / Mythos 5.1 $10 / $50；Sonnet 5 的 $2 / $10 已转正。Foundry 欧亚数据区 +20%、美国数据区 +10% 已生效约 38.3 小时。欧委会 8 月 31 日指定 ChatGPT 为 DSA 首位对话式 VLOSE，通知后四个月（2027 年 1 月）须合规，罚款上限为全球年营业额 6%。OpenAI 自报欧盟月均约 1.591 亿。GPT-5.6 Sol 促销：OpenAI 至少到 11 月 21 日，Foundry 至少到 11 月 30 日。Claude Code 9 月 14 日起周限额相对旧基线 +25%、相对临时加量约 −17%，还剩 12 天。xAI 官方表旗舰仍是 grok-4.6（$2 / $6），无 Grok 4.7。OpenAI 拟 11 月 12 日停止向 SpaceX 收购后的 Cursor 供模，还剩 71 天。Apple 诉 OpenAI 听证仍订 10 月 1 日，还剩 29 天。Claudeforce 官方页仍是试点 + 9 月公开测试，Dreamforce 9 月 15–17 日，还剩 13 天。MAI-Code-1-Flash 9 月 10 日再退，还剩 8 天。
+
+## 二、数据智能体
+
+IDC《MarketScape：中国 Data Agent 2026》仍为 18 家入选仅 4 家进领导者，阿里云产品与战略均居首位。IDC 预测 2028 年六成中国 500 强将部署企业级 Data Agent。
+
+本小时增量：Databricks 官方 9 月更新页仍停在 9 月 1 日：Genie One 网页搜索进入 Beta；Genie One / Genie Agents 可在开启合作方 AI 后使用 Databricks 上的 OpenAI 托管模型；Unity AI Gateway 已托管 Claude Fable 5.1。Google Cloud Data Agent Kit 官方页仍无新产品硬窗口。Snowflake 官方 7 月 28 日稿仍写 Cortex AI Gateway 即将公开预览，CoCo automations 仍为预览，EXECUTE AGENT TASK 默认授给 PUBLIC。Fabric Data Agent 作 MCP 仍为预览，只暴露一个工具。国内：阿里 DataWorks 接 Qwen，腾讯云 DataBuddy 讲 SemQL。信通院意见窗口截至 9 月 5 日，还剩 3 天；团标参编截至 9 月 30 日，还剩 28 天。
+
+## 三、判断
+
+1. 本小时无新的产品硬窗口。OpenRouter 日桶仍停在 9 月 1 日，前五未变。Gemini 3.8 Flash 传闻窗口已进入周三 UTC 下午逾 14 小时，官方博客与模型卡仍停在 3.7 Flash。Copilot 六模型已切满约 38.3 小时，Foundry 属地加价同步满约 38.3 小时。Fable 5.1 官方科研基准仍为 52.6%。网信办第二阶段通报已出，不算产品硬窗口。
+2. Cursor 供模切断还剩 71 天，Claude Code 限额回落还剩 12 天，Copilot 下一刀还剩 8 天，听证还剩 29 天，Dreamforce 还剩 13 天。Grok 4.7 未发。
+3. Data Agent 下一问仍是语义层 + 仓内写回 + 可审计控制面。Databricks 9 月页未增新条。信通院还剩 3 天，团标还剩 28 天。
