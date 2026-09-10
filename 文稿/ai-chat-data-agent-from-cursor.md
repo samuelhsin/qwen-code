@@ -1,0 +1,18 @@
+# AI Chat 与 Data Agent 产业简报
+
+更新：2026-09-10 18:14 UTC
+
+## 本小时增量（相对 17:26）
+
+OpenRouter 用量日仍停在 9 月 9 日。周模型榜仍 Hy4 19.7T / Luna 12.9T / GLM Flash 与 DeepSeek 0731 各 12.3T。日榜 SSR 仍缺。今日应用仍 1.54T / 1.03T / 416B / 374B / 241B；累计卡仍 50.1T / 17T / 10.4T / 9.56T。周应用接口仍 404，但应用页已给出周榜：10.7T / 4.85T / 2.67T / 2.64T / 1.57T（上次 CSR 约 11.6T / 5.34T / 2.91T）。趋势仍 Claude Code +19% / Cline +26%。Featured 仍 Gemini / Astra / Fable：raw 2.772T / 565.197B / 428.705B，延迟 2151 / 20462 / 6140（2.764T / 562.539B / 426.982B，2152 / 18964 / 6134）；展示 2.8T / 565.2B / 428.7B。Astra 中位延迟约 19.0s→20.5s。Gemini 模型页应用：670B / 225B / 104B / 74.2B / 38.8B（668 / 224 / 104 / 74 / 38.6）。应用子页仍仅 1.0M。详情可见累计：Hermes 51.3T（51.2）、Claude Code 17.7T（17.6）、Kilo 仍 10.7T、OpenHands 949B（948）。Endpoints API 仍 200，路由减为 5 条，Vertex/Google 不再出现；30 分钟可用性 100 / 98.92 / 99.70 / 99.80 / 80.10，status=-2 现为 OpenAI Fast（上次 Vertex Flex 87.33）；延迟/吞吐仍空。可见可用性 100.00 / 95.71 / 99.31 / 88.86 / 99.56 / 94.6。通道 p50 本小时为 CSR。Activity/均价仍 404。目录仍见 DeepSeek V4.1 Flash。
+
+
+## AI 对话与智能体
+
+Claude Cowork（Windows）仍 Partially Degraded / identified，最近更新仍 17:20 UTC：微软已做出修复、正在发布；9 月 8 日 Windows 更新仍导致工作区无法访问本机磁盘、本地命令失败，聊天与读写多数仍可用，暂无应用内绕过。OpenAI 状态页仍 200，总评全绿。共享 Project 直链仍 resolved（14:28 UTC）。Work Mode 旧事故元数据仍 16:20 UTC。ChatGPT / API 可用性仍 99.64% / 99.94%。Astra 公告、帮助页、Release Notes、ChatGPT 首页仍 403。开发者文档仍 200，Astra 页仍见 $10/$50；developers 首页仍不见价与 EU 驻留句，platform 定价页仍写 Astra Fast 不支持 EU 驻留。BenchAlign.com DNS 仍失败。benchlm.com 仍落地页；benchlm.ai 仍 Fable 5.1 84.38 / Astra 84.12 / Opus 5 81.64（420/428，核验 9 月 10 日；AA 源仍 9 月 8 日）。DataLearner 仍 pretrained-models（922）。对比页仍 404。AA 仍 Fable max 53.37 / Astra max 52.81。xAI 仍 403。路透仍 401。微软社区仍 200。Copilot 新出现 9 月 10 日 MAI-Code-1-Flash deprecated；仍列 9 月 9 日企业托管智能体权限、9 月 8 日 JetBrains 沙箱与 9 月 4 日 Astra GA；Code Quality agentic autofix 仍缺。GIGAZINE 仍称 Astra 需求空前、或暂停新 Pro 订阅。
+
+## 大数据 Data Agent
+
+央视财经称截至 6 月日均词元 500 万亿，对照 3 月国家数据局 140 万亿。OpenRouter 口径下智能体词元约人类 5 倍。IDC 仍 18 家入选、4 家领导者、阿里云居前。旧概述 slug 中英文仍为 404 错误页（HTTP 200）。新版 Data Agent（Qwen Code）、原版 Agent 智能体与代码编程助手、英文 new-data-agent / data-agent 仍 200。落地仍闪购 12–23 小时压至 5–10 分钟、菜鸟跨 16+ 平台。信通院团标征集至 9 月 30 日。互联网协会 9 月 9 日发布《医疗健康行业多智能体协同要求》等 22 项团标。智能体网关意见至 9 月 18 日；可信评估至 10 月 1 日。9 月 7 日「方升」基准任务征集仍当前。本小时新增：协会 9 月 10 日公开征求《智能体互联网治理 智能体交互技术要求》，意见至 10 月 9 日；同日举办 WorkBuddy 办公实操培训。
+
+来源：OpenRouter、OpenAI、Anthropic、GitHub、阿里云、IDC、DataLearner、AA、BenchLM、中国互联网协会。
