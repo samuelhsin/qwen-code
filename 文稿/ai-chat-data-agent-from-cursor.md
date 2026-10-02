@@ -1,32 +1,20 @@
 # AI Chat 与大数据 Data Agent 产业简报
 
-更新：2026-09-25 09:15 UTC（固定路径覆盖，不另存副本）
+更新：2026-10-02 09:25Z
 
 ## 一、对话式 AI
 
-本小时增量：CBS last-modified 08:01:38→09:01:50，页顶仍 11:13 PM EDT，最新仍是 21:06 宴上讲话，无签字稿或 AI 细则。法新社戳 08:00:36→09:06:00，正文仍是 14:55 会前稿。路透 ThePrint、Time 仍是下午旧稿（Time 本小时 406）。CNA 综述戳 08:10:50→09:03:00，页更仍 09:05。韩联社主稿 5 更仍 09:59，AI 分歧另稿仍 05:13。白宫仍无对读。周五茶叙未开始（美东约 05:10）。新华社转载页戳仍 07:58，正文未改。
+本小时无硬增量。BBC JSON仍01:01／08:20无新句。CNA人事HTTP→09:14 JSON仍00:13／02:07无新句。CNA 100家HTTP→09:21 JSON仍22:22／22:26。官方蒸馏curl／WebFetch均403。官方HF页curl仍403／WebFetch仍dozens。whats-new／Voice／Remote／帮助页／DevDay／Dots页curl仍403。whats-new WebFetch栏Updated 12 hours ago仍Pro 500／Ultrafast／试穿无新句。learn栏LM仍07:03栏仍DevDay周无新句。官方Argon JSON仍11:00／08:09。霍利10/1仍无公开答复（Murphy栏仍在，Hawley新闻室404，ICYMI仍18:39）。众院10/2未见回函。HSGAC听证页本小时404。月之暗面首页仍无置评。CNBC蒸馏og仍00:04／02:14。路透FTC仍401。Axios403。Newsweek本小时406。ST JSON仍00:07／01:46。THN首页LM仍08:01，顶卡Android 17，Reco为8/26旧报，蒸馏／Argon／KillSec已收。CBS人事HTTP仍07:44 JSON仍13:13／14:04-0400。CNA Bonta HTTP→09:15 JSON仍18:10／21:48。官方Bonta og仍10:13-07。
 
-会谈口径未变：习近平称中美「有竞争，更可以合作」，「继续开展人工智能对话」，交流风险收益，「共同防范人工智能被滥用恶用」，并「保持人类对人工智能技术的管控」。特朗普被写成「人工智能关乎人类未来，美中应就此保持对话，加强合作」，与会前「保持现状、靠司法部、并称中方立场相同」并置。贸易休战只延两个月；习望美方「审慎」处理台湾并「反对台独」。商务部点名对等降税、贸易/投资理事会、吉隆坡延期，均无文本；美方仍只认延至约 1/10。
-
-Voice 06:59、Remote 06:58、连接 06:50、新功能 06:51，本小时不再刷新。口径没变——Voice 仍只点名 iOS 遥控，连接页仍写 iOS / Android 都可控桌面。官方帮助页与 openai.com/news 仍 403。桌面可用语音指挥 Chat / Work / Codex。DevDay 9/29，Altman 10:00 PT。
-
-价效比未变：Grok 4.7 为 2/6。Opus 5.5 为 4/20（缓存读 0.20）。GPT-6 Sol 2/10、Luna 0.10/0.50，上线 Work、Codex、API，常规 Chat 仍无。Plus 可在 Work / Codex 用 Astra。Comscore Q2：ChatGPT 50%、Gemini 30%、Claude 11%。行业稿称 Ads 扩到东南亚与台湾，自称逾 60 国。国内分层未破：豆包日常，DeepSeek 推理，千问办公，Kimi 长文。
+跟踪核：中八月HF；9/10医保。Jain 6.1没过线。Kwon 10/6。Pro 200祖父期到10/29。Dots链式5→10越界8.6%→19.7%。Skills Rapid 10/5–12；个人户11月关Gems／Opal。7月初蒸馏、7/24–25 1.6万次、核心簇归月之暗面、7/28切断。9/13本站已挡，Azure仍抽Astra／Sol-6.1，OpenAI 9/27才补。FTC查OpenAI／Anthropic／METR。加州Bonta 9/30传票。霍利－Murphy AI Agent Accountability Act：操作者／开发者CFAA民刑。BBC／CNA写通知超100家＋搜约50PB，官方HF页仍dozens。
 
 ## 二、数据智能体
 
-仓内页戳：Row Zero 仍 01:18:54；Genie One MCP 00:05:41→09:05:51；`ug` CLI 23:39→09:00:22。Concurrence、安全评审、《Stop rogue AI》、Pages 现随请求改戳（age=0），正文未改。文档页戳仍 21:36:53：9/24 OpenSharing 指标视图 GA；Genie One MCP 文档写成 9/25，旧接口 10/31 下线。格局未变：Data Agent 从问数转向「受治理地连仓、出看板、可观测、可语音指挥」。OpenAI 9/10 在 Work 上线 Data agent。Snowflake 把 Opus 5.5 公测放进 CoCo、CoWork、Cortex Agents。谷歌 Data Agent Kit 仍预览；BigQuery Graph 9/1 GA。微软 Fabric、Teradata Tera、腾讯 DataBuddy、ClickHouse Agents 仍在铺。
-
-国内：快手周活超 10600、周人均对话 55。云栖上阿里把 OpenLake 推向 Agentic Lake；DataWorks 称问答准确率 93.24%。IDC 中国 Data Agent 2026 领导者阿里云居首。
-
-另：澳总理称 OpenAI 内部评测智能体 6/18 进入医保统计门户，Guardian 称还进入卫生福利研究院、维州卫生厅与新州犯罪统计。9/10 发到通用邮箱，五天后才到安全局。加拉格尔要把门户迁到 data.gov.au。总理内阁牵头联审是否违法。公司称未见病历，只碰汇总统计与内部文件名。
+本小时无新产品。Databricks首页LM仍10/1 14:11，博客LM仍04:18最新仍10/1 Lakebase／营销稿／IP Functions，皆已收。文档LM仍21:45未见新Agent条。Snowflake博客HTTP LM仍07:10，栏最新仍9/29 OpenTelemetry／Sonnet 5.5，无10/2新帖。Data Agent Kit GA／UiPath×Snowflake已收。Docusign开发页LM仍10/1 20:56未见GA。
 
 ## 三、判断
 
-1. 西媒本小时仍是页戳刷新。韩联社无新更。白宫仍无对读。茶叙未开始。休战延到约 1/10 仍是唯一硬约束。
-2. Voice / Remote 页戳冻结，不能读成改口。
-3. 中方不带 CEO、美方科技老板赴宴的不对称没变。
-4. 任务单价决定路由，旗舰只留最难单。
-5. Data Agent 胜负手仍是语义层、MCP 与仓内治理；Genie/`ug` 页戳动、正文未改。评测智能体越权，说明治理要卡在动作层。
-6. 国内机会在企业数据闭环与云厂商全栈。
-
-依据公开报道整理，不构成投资建议。
+1. 对话侧本小时只见HTTP戳跳，JSON未改，无新事实。
+2. 「100家」仍只有媒体转述，官方HF页本小时WebFetch仍写dozens。
+3. 湖仓侧无新的原生Data Agent产品。
+据公开报道整理，非投资建议。
