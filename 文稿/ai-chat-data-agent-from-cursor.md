@@ -1,19 +1,19 @@
 # AI Chat 与大数据 Data Agent 产业简报
 
-更新：2026-10-17 07:12Z
+更新：2026-10-24 07:12Z
 
 ## 一、对话式 AI
 
-无硬增量。对话侧无官方新产品。已收 GPT-6 Pro 更新：对话页更快；插件／工具更好用；可并行多代理拆任务。向合资格 Pro 滚动推出。已收 ChatGPT Slides：可从对话、文件、大纲或样例稿在 Space 做演示文稿；直接改文字／图／形／表或让模型改；实时共编与评论；网页可导出 PowerPoint／PDF／Google Slides，桌面可开 PowerPoint／Keynote。向合资格 Pro／Business／Enterprise 有 Space 的用户在网页与桌面滚动推出。已收 Rosalind Academic Plan：美国高校符合条件实验室最多 30 个 Business Standard 席位、最长 12 个月免费；GPT-Rosalind 仍须 trusted-access，不含 API。已收 Voice：GPT-Live-1.1 与 Quip。已收 Site limits：Plus／Pro 不再限制可创建 Sites 数量。帮助 changelog Updated 现 11 hours ago（curl 403／WebFetch 200），顶仍 Slides／GPT-6 Pro／GPT-Live-1.1／Rosalind／Site limits。Space 入门仍写 Slides coming soon（Updated 12 days ago）。Voice 帮助 Updated yesterday。Sites 帮助 Updated 仍 1 hour ago，共享限额句未改。产品发布页仍顶 10/16 prompt-to-voice，非对话产品栏，不折。新闻栏 curl 403／WebFetch 200，顶仍 Rosalind。已收 10/14 Codex 退役 GPT-5.5（ChatGPT 登录；API／API key 不受影响；替换优先 6.1 Sol，Free／Go 用 Luna）。learn 三页 LM 仍 05:43–05:44 CDN；whats-new 仍 10/12–16 周 Dots iOS 小组件／Shortcuts，不另折；workspace 本小时 404；changelog 仍顶 10/15 Codex CLI 0.163.0，非对话产品，不折。API changelog 仍顶 prompt-to-voice，LM 仍 05:44 CDN。Dots introducing-chatgpt-dots 403／404；introducing-dots 仍 9/29。Dots 入门 Updated yesterday，仍美国 Pro 短信限测。对齐栏 LM 仍 01:51，未挂新闻栏，不折。THN 顶现 ConnectWise／OpenBSD／AOMEI，超范围。状态页仍恢复。月之暗面首页 200 无置评。Bonta 栏顶仍 Fidelity 加密货币和解，其次仍铜线盗窃；OpenAI 仍 10/1 传票／9/30 国会；栏 LM 06:11→07:10。
+无新硬增量。状态页现 All Systems Operational／none。CIMD 应用连接降级 22:52 调查、23:10 监控、23:43 已恢复，影响 minor。帮助中心聊天支持降级 21:30–22:02 已恢复，影响 none。客服响应延迟 05:58 已恢复；Ad Accounts 仍 00:07 已恢复；Dots 企业降级仍 20:55 已恢复。已收 locked chats：隐藏不删，PIN 认证，向各档滚动。已收 GPT-6 Pro：更快、可并行多代理。已收 Slides：Space 内做演示并可共编导出。已收 Rosalind：美高校最多 30 席／12 月免费。已收 Voice：GPT-Live-1.1 与 Quip。已收 Site limits：Plus／Pro 不再限制可创建 Sites 数。帮助 changelog 现 4d（3d→4d），顶仍 locked chats／Slides／GPT-6 Pro／Live-1.1／Rosalind／Site limits。Space 现 15h（14h→15h），文仍 Slides 滚动、Sheets coming soon。Voice 仍 26m，文仍 Live-1.1／Quip。Dots 仍 2d，仍美国 Pro 短信限测。Sites 现 12h（11h→12h），限额句未改。产品发布页仍顶 Decisions，不折。API changelog 仍顶 10/22 Decisions API GA，不折；LM 仍 05:39。新闻栏仍顶 10/23 存储扩容工程帖，次仍训练环境安全帖，非新产品。learn LM 仍 05:38。whats-new 仍 Dots iOS widgets 不折；workspace DNS失败／403。alignment 仍顶 10/20 g-mean²。THN 现顶 10/24 CISA 将 Collabora CODE／Arista VeloCloud 列入 KEV，次仍 BlackX UEFI，再 Ruby/GitLab，域外；LM 19:19→06:25。月之暗面200。Bonta 仍顶 10/23 第九巡回国民警卫队，次仍 Texas Two-Step，非产品。
 
 ## 二、数据智能体
 
-无硬增量。已收 Document Intelligence 实时 REST GA 与 ai_decide REST beta。买侧栏 LM 仍 00:29，顶仍 10/8 Replit／Lakebase。栏仍见 10/16 Transactions GA／Binary Blind Spot／Stripe Data Pipeline，均非智能体。已收 Cortex Agent SDK、Genie Code CLI Beta。Snowflake 栏 curl 200（LM 仍 00:25 CDN）／新闻栏 200 仍 Data Mirroring GA，非智能体。已见 CoWork 文档生成 GA。Dataiku 官方博文仍 9/24「generally available October 15」；新闻稿仍 9/24 will be generally available in October；首页卡仍 Now generally available；栏仍 Shadow AI 思想稿，不另折。
+无新硬增量。已收 AI Runtime GA：湖仓内托管 GPU 训练；Unity Catalog 治理。已收 Agent Memory：Agent Bricks 托管记忆，Lakebase；Beta；通过率三倍、token-31%。买侧栏 LM 仍 19:03，顶仍 10/8 Replit／Lakebase。栏仍顶 Spark 声明式管道／能源交易思想帖，再 Fraud Analyst／AI Bill，非新产品。已收 Cortex Agent SDK、Genie Code CLI Beta。Snowflake blog LM 00:55→01:10（CDN）。栏仍顶 10/23 Sales Finance／Beyond Adoption 思想帖，再 Agentic Analytics，非新产品。docs 仍顶 10/26 错讯；次仍 Responses API，Retrieve 仍列，不折。notes LM 仍 21:39，仍另列 GA Aggregated 连接器 Beta，不折；仍 10/23 DF cache／Box Audit Logs。Dataiku 博客仍 10/22 CIO confession，非新产品。
 
 ## 三、判断
 
-1. 对话侧无新产品；帮助栏顶仍 Slides／GPT-6 Pro，新闻／产品页未挂。
-2. workspace 仍 404；changelog 仍顶 10/15 CLI 0.163.0。
-3. 湖仓无新产品；Snowflake 本小时栏 200；Dataiku 本小时仍无新确认帖。
+1. 对话侧无新产品。状态现全绿。CIMD 22:52–23:43 已恢复。Voice 仍 26m。Space 现 15h。Dots 仍 2d。Sites 现 12h。帮助 changelog 现 4d。API／learn LM 仍 05:39／05:38。新闻栏仍顶工程帖，非产品。
+2. THN 现顶 CISA KEV（Collabora／VeloCloud），次 BlackX，再 Ruby/GitLab，域外；LM 现 06:25。Bonta 仍顶第九巡回，非产品。
+3. 湖仓无新硬增量。AIR GA／Agent Memory 已收。买侧栏仍顶声明式管道／能源交易思想帖。Snowflake 栏仍顶 10/23 思想帖。notes LM 仍 21:39。docs 仍顶 10/26 错讯。Dataiku 无新产品。
 
 免责声明：公开网页与检索综合，非投资建议；官方栏优先，转述不升格。
