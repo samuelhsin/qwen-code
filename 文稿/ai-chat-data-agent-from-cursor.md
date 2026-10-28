@@ -1,0 +1,19 @@
+# AI Chat 与大数据 Data Agent 产业简报
+
+更新：2026-10-28 09:12Z
+
+## 一、对话式 AI
+
+无新硬增量。已收 iCloud Mail／Calendar 插件：连邮件与日历查收件箱、看日程、改事件；全计划，web／桌面／iOS。帮助 changelog 现 15h（14h→15h；两次均顶 iCloud）。已收 GPT-6.1 Terra：Work／Codex／API。learn／API 仍顶 Terra。API LM 现 08:49（05:50→08:49），刷新非产品。learn LM 现 08:57。状态仍 All Systems Operational／none。6.1 Sol 16:20 已恢复（minor）。已收 locked chats、GPT-6 Pro 并行多代理、Slides、Rosalind、Voice（Live-1.1／Quip）、Site limits。Space 现 14h（13h→14h），文仍 Slides 滚动、Sheets coming soon，老化非产品。Voice 现 46m（13m→46m），文未改，老化非产品。Dots 现 10h（9h→10h），文仍美国 Pro 短信限测，老化非产品。Sites 现 13h，限额句未改。新闻栏仍顶 10/27 Oracle 把应用接入 ChatGPT（Company），次学术共同体／CodeRabbit／Terra，不折。workspace 无解析（403）。alignment 仍顶 10/20 g-mean²。THN 现顶 Anthropic 未发布模型链式漏洞，次 10/28 FBI 查封 Virtualine，日本 GMO 百万悬赏退三，域外；LM 现 08:58。月之暗面200。Bonta 仍顶 10/27 Salgado 涉警枪击报告，次金融犯罪执法回撤诉讼，非产品；栏头现 LM 09:06。
+
+## 二、数据智能体
+
+无新硬增量。已收 CoCo 连续／批量装载 GA：自然语言建 Snowpipe 或 COPY INTO；标准表／托管 Iceberg；CoCo CLI／Desktop／Snowsight。docs 现顶 10/28 Iceberg Time Travel Preview，次 10/27 CoCo GA，表快照非智能体，不折。Responses／Retrieve 仍列，不折。栏仍列 10/27 Automated Snowpipe 与 Oracle OCI 合作帖，不另折。GET／HEAD 现 09:10／09:10（08:15→09:10）。已收 AIR GA、Agent Memory、Cortex Agent SDK、Genie Code CLI Beta。买侧栏 LM 仍 07:32，featured 仍顶 Document Intelligence（10/14 已发布）。栏仍顶 10/27 Vital Skills／Genie Code HLS 帖，次仍 Lakehouse Federation／ai_extract／BigQuery，非产品。notes 仍顶 10/27 UC volumes 编辑 GA 与 Terra Unity Gateway，仍列 OAuth／AI Functions 权限，不折。Dataiku 博客仍顶 10/27 Headless 帖，已发布非新产品。
+
+## 三、判断
+
+1. 对话侧无新硬增量。iCloud／Terra 已收。状态仍 All Systems Operational／none。帮助 changelog 现 15h，顶 iCloud。Voice 老化到 46m，文未改。Sites 仍 13h。Space 老化到 14h。Dots 老化到 10h。API LM 现 08:49，仍顶 Terra。新闻栏顶 Oracle 合作，不折。
+2. THN 现顶 Anthropic 未发布模型链式漏洞，次 FBI 查封 Virtualine，日本 GMO 百万悬赏退三，域外。Bonta 仍顶 Salgado 枪击报告，非产品。
+3. 湖仓无新硬增量。CoCo GA／AIR GA／Agent Memory 已收。买侧栏 LM 仍 07:32，Vital Skills 帖不折。Snowflake GET／HEAD 现 09:10／09:10。docs 仍顶 10/28 Iceberg Time Travel Preview，不折。notes 仍 10/27 UC 编辑／Terra Gateway 不折。Dataiku Headless 帖不折。
+
+免责声明：公开网页与检索综合，非投资建议；官方栏优先，转述不升格。
